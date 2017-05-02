@@ -1,46 +1,28 @@
-<footer class="site-footer">
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Company Bio</h5>
+        <p class="grey-text text-lighten-4"> Fanny pack listicle health goth poutine tousled kogi. Banjo iPhone vegan flannel, chia ramps slow-carb raclette offal trust fund intelligentsia. Flannel craft beer DIY copper mug. Hammock cronut single-origin coffee mumblecore cliche. Aesthetic live-edge pabst, vaporware farm-to-table butcher hella slow-carb letterpress enamel pin bushwick. Chicharrones blog shabby chic crucifix, post-ironic swag schlitz tacos salvia tumeric synth. Slow-carb stumptown poutine, hot chicken vice shoreditch cardigan ethical normcore chartreuse wayfarers.
+        </p>
 
-  <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
       </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
+      <div class="col l6 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Linked In</a></li>
+          <li><a class="white-text" href="#!">Facebook</a></li>
+          <li><a class="white-text" href="#!">Twitter</a></li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
       </div>
     </div>
-
   </div>
-
+  <div class="footer-copyright">
+    <div class="container">
+    <p>Based in New Orleans, LA. <em>Copyright © <span id="year">{{ site.time | date: '%Y' }}</span> {{ site.title }}.</em></p>
+    </div>
+  </div>
 </footer>
+
+{% include scripts.html %}

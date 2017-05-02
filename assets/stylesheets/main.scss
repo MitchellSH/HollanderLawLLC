@@ -2,29 +2,155 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-
-// Our variables
-$base-font-family: 'Roboto';
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       rgba(245,245,245,0.8);
-$background-color: #12161b;
-$brand-color:      #fbcc40;
-
-$grey-color:       #fff;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
 @import "materialize";
 @import "partials/fonts";
+
+// Light #3a414d
+// Normal #141b25
+// Dark #000000
+// Accent #fcc914
+
+body {
+  font-family: 'Playfair';
+  background-color: #141b25;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #fff !important;
+}
+
+.intro {
+  letter-spacing: .3em;
+  text-transform: uppercase;
+}
+
+a {
+  color: #fcc914 !important;
+}
+
+nav {
+  background-color: transparent !important;
+  height: 100px !important;
+  line-height: 100px !important;
+}
+
+nav .button-collapse i {
+    height: 100px !important;
+    line-height: 100px !important;
+}
+
+.side-nav {
+  background-color: #fcc914 !important;
+  li {
+    a {
+      color: #000 !important;
+      font-weight: bold;
+    }
+  }
+}
+
+h5, h4 {
+  color: #fff !important;
+}
+
+.brand-logo {
+  margin-top: 5px;
+}
+
+h2.header {
+  color: #fff !important;
+}
+
+.avatar-container {
+  width: 100%;
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+p {
+  font-family: 'Raleway';
+  line-height: 2rem;
+  color: #fff;
+}
+
+i.material-icons {
+  color: #fcc914;
+}
+
+.button-collapse {
+  color: #fff !important;
+  i.material-icons {
+    color: #fff !important;
+  }
+}
+
+.center-margin {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#index-banner {
+  background-image: url("/assets/images/background1-60.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 720px;
+  width: 100%;
+  line-height: 0;
+  height: auto;
+}
+
+.parallax-container {
+  min-height: 640px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+.parallax {
+  opacity: .6 !important;
+}
+
+.special-section {
+  min-height: 500px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+footer {
+  background-color: #161d26 !important;
+}
+
+@media only screen and (max-width : 992px) {
+
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
