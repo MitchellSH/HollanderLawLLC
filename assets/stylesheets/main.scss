@@ -3,9 +3,10 @@
 ---
 @charset "utf-8";
 @import "materialize";
+@import "animate";
 @import "partials/fonts";
 
-// Light #3a414d
+// Light #5a6579
 // Normal #141b25
 // Dark #000000
 // Accent #fcc914
@@ -15,18 +16,42 @@ body {
   background-color: #141b25;
 }
 
+.hd {
+  opacity: 0;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #fff !important;
 }
 
+.no-mar-bot {
+  margin-bottom: 0px !important;
+}
+
+.collection {
+  background-color: transparent !important;
+  border: 0px solid #000 !important;
+  .collection-header {
+    background-color: transparent !important;
+    border: 0px solid #000 !important;
+
+  }
+  .collection-item {
+    background-color: transparent !important;
+    border: 0px solid #000 !important;
+
+  }
+}
+
 .intro {
   letter-spacing: .3em;
   text-transform: uppercase;
+  // text-shadow: 0px 0px 10px #141b25;
 }
 
 a {
-  color: #fcc914 !important;
+  color: #5a6579 !important;
 }
 
 nav {
@@ -41,16 +66,15 @@ nav .button-collapse i {
 }
 
 .side-nav {
-  background-color: #fcc914 !important;
+  background-color: #141b25 !important;
   li {
     a {
-      color: #000 !important;
-      font-weight: bold;
+      color: #fff !important;
     }
   }
 }
 
-h5, h4 {
+h6, h5, h4, h3, h2, h1 {
   color: #fff !important;
 }
 
@@ -77,7 +101,7 @@ p {
 }
 
 i.material-icons {
-  color: #fcc914;
+  color: #5a6579;
 }
 
 .button-collapse {
@@ -94,13 +118,58 @@ i.material-icons {
 }
 
 #index-banner {
-  background-image: url("/assets/images/background1-60.png");
+  background-image: url("/assets/images/background4.png");
   background-size: cover;
   background-position: center;
   min-height: 720px;
   width: 100%;
   line-height: 0;
   height: auto;
+}
+
+input, select, textarea{
+  color: #fff !important;
+}
+
+textarea:focus, input:focus {
+  color: #fff !important;
+}
+
+input:focus {
+  border-bottom: 0px solid #03a9f4 !important;
+  -webkit-box-shadow: 0 0px 0 0 #03a9f4 !important;
+  -moz-box-shadow: 0 0px 0 0 #03a9f4 !important;
+  box-shadow: 0 0px 0 0 #03a9f4 !important;
+}
+
+#contact {
+  margin-top: 40px;
+  form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 75% !important;
+    .special-col {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    input {
+      background-color: rgba(255, 255, 255, .15);
+      padding: 10px;
+      border-radius: 3px;
+      border-bottom: 0px solid #000 !important;
+      margin-bottom: 3px !important;
+    }
+    button {
+      background-color: #5a6579 !important;
+      color: #fff !important;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: "Raleway";
+      margin-top: 25px;
+      width: 200px;
+    }
+  }
 }
 
 .parallax-container {
@@ -114,13 +183,13 @@ i.material-icons {
 }
 
 .parallax {
-  opacity: .6 !important;
+  opacity: .5 !important;
 }
 
 .special-section {
   min-height: 500px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 footer {
@@ -137,6 +206,9 @@ footer {
     top: 40%;
   }
   #index-banner .section {
+    top: 10%;
+  }
+  #practice-areas .section {
     top: 10%;
   }
 }
