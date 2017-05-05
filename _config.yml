@@ -17,7 +17,7 @@ title: Hollander Law
 email: mike@hollanderlawllc.com
 phone: ​985.705.8914
 description: > # this means to ignore newlines until "baseurl:"
-  A boutique law firm that gives you the attention you deserve
+  A law firm that gives you the attention you deserve
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
