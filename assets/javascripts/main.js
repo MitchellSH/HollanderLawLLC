@@ -15,6 +15,7 @@ function initialize(){
 
 function sendEmail(){
   // still need to validate form
+  // https://gist.github.com/edmundojr/975b08c39ab0a7a1b514
   var cF = $('#contactform');
   cF.submit(function(e) {
   	e.preventDefault();
