@@ -128,22 +128,24 @@ layout: default
         <!-- https://formspree.io/ -->
         <!-- In case he wants a newsletter http://www.controlfd.com/2016/05/16/add-a-mailchimp-subscriber-form-to-your-jekyll-blog.html -->
         <form id="contactform" method="POST">
-          <div class="row no-pad-bot no-mar-bot">
-            <div class="col l6 s12">
-              <input type="text" placeholder="Name" name="name">
+          <div class="form-container">
+            <div class="row no-pad-bot no-mar-bot">
+              <div class="col l6 s12">
+                <input type="text" placeholder="Name" name="name">
+              </div>
+              <div class="col l6 s12">
+                <input type="email" placeholder="Email" name="email">
+              </div>
             </div>
-            <div class="col l6 s12">
-              <input type="email" placeholder="Email" name="email">
+            <div class="row no-pad-bot no-mar-bot">
+              <div class="col s12">
+                <input type="text" placeholder="Message" name="message">
+              </div>
             </div>
-          </div>
-          <div class="row no-pad-bot no-mar-bot">
-            <div class="col s12">
-              <input type="text" placeholder="Message" name="message">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s12">
-              <button id="submitbtn" class="waves-effect waves-light btn" type="submit" value="Send">Send</button>
+            <div class="row">
+              <div class="col s12">
+                <button id="submitbtn" class="waves-effect waves-light btn" type="submit" value="Send">Send</button>
+              </div>
             </div>
           </div>
           <input type="hidden" name="_subject" value="Hollander Law Inquiry" />

@@ -14,6 +14,7 @@ function initialize(){
 }
 
 function sendEmail(){
+  // still need to validate form
   var cF = $('#contactform');
   cF.submit(function(e) {
   	e.preventDefault();
@@ -23,15 +24,17 @@ function sendEmail(){
   		data: $(this).serialize(),
   		dataType: 'json',
   		beforeSend: function() {
-  			cF.append('<div class="alert alert--loading">Sending message…</div>');
+        $('.form-container').addClass('hide');
+  			cF.append('<div class="sending notice">Sending message…</div>');
   		},
   		success: function(data) {
-  			cF.find('.alert--loading').hide();
-  			cF.append('<div class="alert alert--success">Message sent!</div>');
+  			cF.find('.sending').hide();
+  			cF.append('<div class="success notice">Message sent!</div>');
   		},
   		error: function(err) {
-  			cF.find('.alert--loading').hide();
-  			cF.append('<div class="alert alert--error">Ops, there was an error.</div>');
+  			cF.find('.sending').hide();
+        $('.form-container').addClass('hide');
+  			cF.append('<div class="error notice">Ops, there was an error.</div>');
   		}
   	});
   });
