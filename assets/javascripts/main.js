@@ -5,7 +5,8 @@ $(document).ready(initialize);
 function initialize(){
   $('.button-collapse').sideNav();
   $('.parallax').parallax();
-  $("#index-banner").css("min-height", SCREEN_HEIGHT);
+  $("#index-banner").css("height", SCREEN_HEIGHT);
+  $(".index-banner-section").css("min-height", SCREEN_HEIGHT - 200);
   $('.smoothScroll').click(smoothScroll);
   initWaypoints();
   $('.intro').addClass('animated fadeInDown');
