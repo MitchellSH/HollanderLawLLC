@@ -18,7 +18,7 @@ function sendEmail(){
   cF.submit(function(e) {
   	e.preventDefault();
   	$.ajax({
-  		url: '//formspree.io/mitchellshollander@gmail.com',
+  		url: '//formspree.io/mike@hollanderlawllc.com',
   		method: 'POST',
   		data: $(this).serialize(),
   		dataType: 'json',
