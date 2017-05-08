@@ -85,32 +85,30 @@ layout: default
     <div class="container">
       <div class="row center">
         <div class="col s12">
-          <ul class="collection with-header hd wp10">
+          <ul class="collection with-header row hd wp10">
             <li class="collection-header"><h5>Practice Areas</h5></li>
-            <li class="collection-item row">
-              <div class="col l4 s12">Corporate Counsel Services</div>
-              <div class="col l4 s12">Business Formation, Maintenance and Dissolution</div>
-              <div class="col l4 s12">Contract Review, Drafting and Negotiations</div>
+            <li class="collection-item col custom-col">
+              <div class="col s12">Corporate Counsel Services</div>
+              <div class="col s12">Business Formation, Maintenance and Dissolution</div>
+              <div class="col s12">Contract Review, Drafting and Negotiations</div>
             </li>
-            <li class="collection-item row">
-              <div class="col l4 s12">Breach of Contract and Collections</div>
-              <div class="col l4 s12">Commercial Litigation</div>
-              <div class="col l4 s12">Construction Litigation</div>
+            <li class="collection-item col custom-col">
+              <div class="col s12">Breach of Contract and Collections</div>
+              <div class="col s12">Commercial Litigation</div>
+              <div class="col s12">Construction Litigation</div>
             </li>
-            <li class="collection-item row">
-              <div class="col l4 s12">Successions and Estate Planning</div>
-              <div class="col l4 s12">Wills and Trusts</div>
+            <li class="collection-item col custom-col">
+              <div class="col s12">Successions and Estate Planning</div>
+              <div class="col s12">Wills and Trusts</div>
             </li>
-            <li class="collection-item row">
-              <div class="col l4 s12">Bankruptcy - Creditor Issues</div>
+            <li class="collection-item col custom-col">
+              <div class="col s12">Bankruptcy - Creditor Issues</div>
             </li>
-            <li class="collection-item row">
-              <div class="col l4 s12">Personal Injury</div>
-              <div class="col l4 s12">Automobile Accidents</div>
-              <div class="col l4 s12">Slip and Fall</div>
-            </li>
-            <li class="collection-item row">
-              <div class="col l4 s12">Wrongful Death</div>
+            <li class="collection-item col custom-col">
+              <div class="col s12">Personal Injury</div>
+              <div class="col s12">Automobile Accidents</div>
+              <div class="col s12">Slip and Fall</div>
+              <div class="col s12">Wrongful Death</div>
             </li>
           </ul>
         </div>
@@ -127,21 +125,22 @@ layout: default
     <div class="row hd wp11">
       <div class="col s12 center">
         <h4>Contact Us</h4>
+        <div id="fillAllChip" class="chip red darken-1 hide">Please fill all required fields!<i class="white-text material-icons notice">info_outline</i></div>
         <!-- https://formspree.io/ -->
         <!-- In case he wants a newsletter http://www.controlfd.com/2016/05/16/add-a-mailchimp-subscriber-form-to-your-jekyll-blog.html -->
         <form id="contactform" method="POST">
           <div class="form-container">
             <div class="row no-pad-bot no-mar-bot">
               <div class="col l6 s12">
-                <input class="validate" type="text" placeholder="Name" name="name">
+                <div class="input-field"><input id="name" class="validate field" placeholder="Name" type="text" name="name"></div>
               </div>
               <div class="col l6 s12">
-                <input class="validate" type="email" placeholder="Email" name="email">
+                <div class="input-field"><input id="email" class="validateEmail field" placeholder="Email" type="email" name="email"></div>
               </div>
             </div>
             <div class="row no-pad-bot no-mar-bot">
               <div class="col s12">
-                <input class="validate" type="text" placeholder="Message" name="message">
+                <div class="input-field"><textarea id="message" class="materialize-textarea validate field" placeholder="Message" type="text" name="message"></textarea></div>
               </div>
             </div>
             <div class="row">
@@ -151,7 +150,6 @@ layout: default
             </div>
           </div>
           <input type="hidden" name="_subject" value="Hollander Law Inquiry" />
-          <input type="hidden" name="_next" value="/#contact" />
           <input type="text" name="_gotcha" style="display:none" />
         </form>
       </div>

@@ -10,21 +10,36 @@
       <div class="col l3 s12">
         <h5 class="white-text">Connect</h5>
         <ul>
-          <li><a class="white-text" href="#!">Linked In</a></li>
-          <li><a class="white-text" href="#!">Facebook</a></li>
+          <li><a class="white-text" href="{{ site.linkedin }}">Linked In</a></li>
+          <li><a class="white-text" href="{{ site.facebook }}">Facebook</a></li>
           <!-- <li><a class="white-text" href="#!">Twitter</a></li> -->
         </ul>
       </div>
       <div class="col l3 s12">
-        <h5 class="white-text">Location</h5>
-        <ul>
-          <li><a class="white-text" href="#!">{{ site.phone }}</a></li>
+        <h5 class="white-text">Locations</h5>
+        <ul class="locations">
+          <li>
+            <address>
+              <strong>Covington</strong><br>
+              70325 Highway 1077<br>
+              Suite 300<br>
+              Covington, LA 70433
+            </address>
+          </li>
+          <li>
+            <address>
+              <strong>New Orleans</strong><br>
+              2700 Varden Ave<br>
+              Metairie, LA 70001
+            </address>
+          </li>
         </ul>
       </div>
       <div class="col l3 s12">
-        <h5 class="white-text">Call</h5>
+        <h5 class="white-text">Contact</h5>
         <ul>
-          <li><a class="white-text" href="#!">{{ site.phone }}</a></li>
+          <li><a href="mailto:{{ site.email }}?subject=Hollander Law LLC Inquiry">mike@hollanderlawllc.com</a></li>
+          <li><a class="phone white-text" href="#!">{{ site.phone }}</a></li>
         </ul>
       </div>
     </div>

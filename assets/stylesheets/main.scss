@@ -51,7 +51,7 @@ nav .brand-logo {
 }
 
 a {
-  color: #5a6579 !important;
+  color: #8597b6 !important;
 }
 
 nav {
@@ -134,16 +134,31 @@ i.material-icons {
 input, select, textarea{
   color: #fff !important;
 }
+//
+// textarea:focus, input:focus {
+//   color: #fff !important;
+// }
+//
+// input:focus {
+//   border-bottom: 0px solid #03a9f4 !important;
+//   -webkit-box-shadow: 0 0px 0 0 #03a9f4 !important;
+//   -moz-box-shadow: 0 0px 0 0 #03a9f4 !important;
+//   box-shadow: 0 0px 0 0 #03a9f4 !important;
+// }
 
-textarea:focus, input:focus {
-  color: #fff !important;
+.notice {
+  float: right;
+  font-size: 16px;
+  line-height: 50px;
+  padding-left: 8px;
 }
 
-input:focus {
-  border-bottom: 0px solid #03a9f4 !important;
-  -webkit-box-shadow: 0 0px 0 0 #03a9f4 !important;
-  -moz-box-shadow: 0 0px 0 0 #03a9f4 !important;
-  box-shadow: 0 0px 0 0 #03a9f4 !important;
+.chip {
+  color: #fff !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  border-radius: 3px !important;
+  font-family: "Raleway" !important;
 }
 
 #contact {
@@ -153,15 +168,16 @@ input:focus {
     margin-right: auto;
     margin-top: 30px;
     width: 75% !important;
+    font-family: 'Raleway' !important;
     .special-col {
       padding-left: 30px;
       padding-right: 30px;
     }
     input {
-      background-color: rgba(255, 255, 255, .15);
-      padding: 10px;
-      border-radius: 3px;
-      border-bottom: 0px solid #000 !important;
+      // background-color: rgba(255, 255, 255, .15);
+      // padding: 10px;
+      // border-radius: 3px;
+      // border-bottom: 0px solid #000 !important;
       margin-bottom: 3px !important;
     }
     button {
@@ -196,8 +212,44 @@ input:focus {
   padding-bottom: 50px;
 }
 
+.custom-col {
+    width: 20%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    div {
+      margin-bottom: 25px;
+    }
+}
+
 footer {
   background-color: #161d26 !important;
+  p {
+    font-size: 12px;
+  }
+  a {
+    font-size: 12px !important;
+    font-family: 'Raleway' !important;
+  }
+  .phone {
+    font-family: 'Raleway' !important;
+    font-size: 12px;
+  }
+  .locations {
+    li {
+      margin-bottom: 15px;
+      address {
+        font-family: 'Raleway' !important;
+        font-size: 12px;
+        color: #fff !important;
+        font-style: normal !important;
+        strong {
+          font-weight: bold !important;
+        }
+      }
+    }
+  }
+
   .footer-copyright p {
     font-size: 10px;
   }
@@ -214,6 +266,14 @@ footer {
   }
   #practice-areas .section {
     top: 10%;
+  }
+
+  .custom-col {
+    width: 100% !important;
+    padding-bottom: 20px !important;
+    div {
+      margin-bottom: 0px;
+    }
   }
 }
 

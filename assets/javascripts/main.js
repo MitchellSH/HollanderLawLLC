@@ -10,12 +10,10 @@ function initialize(){
   initWaypoints();
   $('.intro').addClass('animated fadeInDown');
   $('.intro-des').addClass('animated fadeInUp');
-  sendEmail();
+  $('#submitbtn').click(validateForm);
 }
 
 function sendEmail(){
-  // still need to validate form
-  // https://gist.github.com/edmundojr/975b08c39ab0a7a1b514
   var cF = $('#contactform');
   cF.submit(function(e) {
   	e.preventDefault();
@@ -25,20 +23,45 @@ function sendEmail(){
   		data: $(this).serialize(),
   		dataType: 'json',
   		beforeSend: function() {
-        $('.form-container').addClass('hide');
-  			cF.append('<div class="sending notice">Sending message…</div>');
+        $('.form-container').hide();
+  			cF.append('<div class="chip animated fadeIn sending blue darken-4">Sending Message <i class="white-text material-icons notice">send</i></div>');
   		},
   		success: function(data) {
-  			cF.find('.sending').hide();
-  			cF.append('<div class="success notice">Message sent!</div>');
+  			cF.find('.sending').removeClass("animated fadeIn").addClass('animated fadeOut').hide();
+  			cF.append('<div class="chip animated fadeIn success green darken-1">Message Sent <i class="white-text material-icons notice">done</i></div>');
+
   		},
   		error: function(err) {
-  			cF.find('.sending').hide();
-        $('.form-container').addClass('hide');
-  			cF.append('<div class="error notice">Ops, there was an error.</div>');
+  			cF.find('.sending').removeClass("animated fadeIn").addClass('animated fadeOut').hide();
+        $('.form-container').hide();
+  			cF.append('<div class="chip animated fadeIn error red darken-1">Ops, there was an error. <i class="white-text material-icons notice">report_problem</i></div>');
   		}
   	});
   });
+}
+
+function validateForm(){
+  var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+  if($('.valid').length < 3){
+    $('.validate').each(function(){
+      if($(this).val() == null || $(this).val() == ""){
+        $('#fillAllChip').removeClass('hide');
+        $(this).removeClass('valid').addClass('invalid');
+      } else {
+        $(this).removeClass('invalid').addClass('valid');
+      }
+    });
+    if($('.validateEmail').val() == null || $('.validateEmail').val() == "" || !testEmail.test($('.validateEmail').val())){
+      $('#fillAllChip').removeClass('hide');
+      $('.validateEmail').removeClass('valid').addClass('invalid');
+    } else {
+      $('.validateEmail').removeClass('invalid').addClass('valid');
+    }
+    return false;
+  } else {
+    $('#fillAllChip').addClass('hide');
+    sendEmail();
+  }
 }
 
 function smoothScroll(){
