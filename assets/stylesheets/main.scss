@@ -29,6 +29,15 @@ nav .brand-logo {
   margin-bottom: 0px !important;
 }
 
+.social-group {
+  display: inline-flex;
+  .fa {
+    padding-right: 15px !important;
+    font-size: 25px !important;
+  }
+}
+
+
 .collection {
   background-color: transparent !important;
   border: 0px solid #000 !important;
